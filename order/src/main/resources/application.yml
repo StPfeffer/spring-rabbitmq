@@ -2,6 +2,7 @@ spring:
   application:
     name: order
   rabbitmq:
+#    host: rabbitmq # if running everything in Docker
     host: localhost
     port: 5672
     username: guest
