@@ -9,3 +9,25 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+
+  order:
+    container_name: spring-rabbitmq-order
+    image: spring-rabbit-mq-order:latest
+    build:
+      context: order
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - rabbitmq
+
+  inventory:
+    container_name: spring-rabbitmq-inventory
+    image: spring-rabbit-mq-inventory:latest
+    build:
+      context: inventory
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
