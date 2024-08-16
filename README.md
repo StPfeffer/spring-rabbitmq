@@ -37,11 +37,11 @@ To start the Spring Boot application, use:
 mvn spring-boot:run
 ```
 
-Ensure that RabbitMQ is running on its default port (`5672`) or configure the connection details in the `application.properties` file.
+Ensure that RabbitMQ is running on its default port (`5672`) or configure the connection details in the `application.yml` file.
 
 ### Configuration
 
-Configuration details for RabbitMQ can be found in the `src/main/resources/application.properties` file of each module. You can adjust the connection settings, queues, exchanges, and other RabbitMQ parameters as needed.
+Configuration details for RabbitMQ can be found in the `src/main/resources/application.yml` file of each module. You can adjust the connection settings, queues, exchanges, and other RabbitMQ parameters as needed.
 
 ## Running with Docker
 
